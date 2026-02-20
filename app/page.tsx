@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const CREDITS = [
@@ -224,7 +225,7 @@ export default function CarbonMarketplace() {
         {/* Links */}
         <div style={{ display: "flex", gap: 38 }}>
           {["Market", "Portfolio", "Analytics", "Bridge"].map(item => (
-            <span key={item} className="nav-link">{item}</span>
+            <Link key={item} href={`${item.toLowerCase()}`} className="nav-link">{item}</Link>
           ))}
         </div>
 
